@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Motion UI"
+  short_description: "Consistent native SwiftUI components and motion"
+  default_prompt: "Use $ios-motion-ui to build this iOS interface with a shared design system and purposeful native motion."

@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "skill": "ios-motion-ui",
+  "version": "1.0.0",
+  "minimum_ios": "17.0",
+  "components": {
+    "foundation": {
+      "name": "Shared foundation",
+      "kind": "bundled",
+      "description": "App theme, three presets, semantic visual roles and native motion tokens.",
+      "source_files": [
+        "assets/swift/MotionTheme.swift",
+        "assets/swift/MotionTokens.swift"
+      ],
+      "dependencies": [],
+      "guide": "references/design-system.md"
+    },
+    "button-style": {
+      "name": "Button style",
+      "kind": "bundled",
+      "description": "Primary, secondary and destructive button appearances with accessible press and disabled states.",
+      "source_files": [
+        "assets/swift/MotionButtonStyle.swift"
+      ],
+      "dependencies": [
+        "foundation"
+      ],
+      "guide": "references/components.md"
+    },
+    "card": {
+      "name": "Card",
+      "kind": "bundled",
+      "description": "Shared semantic content surface with flexible view-builder content.",
+      "source_files": [
+        "assets/swift/MotionCard.swift"
+      ],
+      "dependencies": [
+        "foundation"
+      ],
+      "guide": "references/components.md"
+    },
+    "chip": {
+      "name": "Filter chip",
+      "kind": "bundled",
+      "description": "A labeled Boolean selection with caller-owned binding and selected semantics.",
+      "source_files": [
+        "assets/swift/MotionChip.swift"
+      ],
+      "dependencies": [
+        "foundation",
+        "button-style"
+      ],
+      "guide": "references/components.md"
+    },
+    "disclosure": {
+      "name": "Disclosure",
+      "kind": "bundled",
+      "description": "Native disclosure group styled with shared tokens and caller-owned expansion state.",
+      "source_files": [
+        "assets/swift/MotionDisclosure.swift"
+      ],
+      "dependencies": [
+        "foundation"
+      ],
+      "guide": "references/components.md"
+    },
+    "status-label": {
+      "name": "Status label",
+      "kind": "bundled",
+      "description": "Readable info, success, warning, error and loading states with semantic symbols.",
+      "source_files": [
+        "assets/swift/MotionStatusLabel.swift"
+      ],
+      "dependencies": [
+        "foundation"
+      ],
+      "guide": "references/components.md"
+    },
+    "async-button": {
+      "name": "Async button",
+      "kind": "bundled",
+      "description": "Cancellable view-scoped async action with duplicate suppression and required error handling.",
+      "source_files": [
+        "assets/swift/MotionAsyncButton.swift"
+      ],
+      "dependencies": [
+        "foundation",
+        "button-style"
+      ],
+      "guide": "references/components.md"
+    },
+    "sheet": {
+      "name": "Sheet and bottom sheet",
+      "kind": "native",
+      "description": "Native modal task presentation, resizing and dismissal.",
+      "native_api": "sheet; presentationDetents",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "confirmation": {
+      "name": "Confirmation and alert",
+      "kind": "native",
+      "description": "Short choices, destructive confirmations and blocking messages.",
+      "native_api": "confirmationDialog; alert",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "popover": {
+      "name": "Popover and menu",
+      "kind": "native",
+      "description": "Tap-accessible anchored choices and information with size-class adaptation.",
+      "native_api": "popover; Menu",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "navigation": {
+      "name": "Navigation and tabs",
+      "kind": "native",
+      "description": "Native destination hierarchy, peer tabs and adaptive sidebar.",
+      "native_api": "NavigationStack; NavigationLink; TabView; NavigationSplitView",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "segmented-control": {
+      "name": "Segmented selection",
+      "kind": "native",
+      "description": "Short mutually exclusive choices with native selection semantics.",
+      "native_api": "Picker; pickerStyle(.segmented)",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "toggle": {
+      "name": "Toggle and checkbox choice",
+      "kind": "native",
+      "description": "Boolean settings or multiple list selections.",
+      "native_api": "Toggle; List(selection:)",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "text-input": {
+      "name": "Text and password input",
+      "kind": "native",
+      "description": "Native keyboard, autofill, focus, submission and inline validation.",
+      "native_api": "TextField; SecureField; FocusState",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "search": {
+      "name": "Search and autocomplete",
+      "kind": "native",
+      "description": "Native query entry and a separate selected result.",
+      "native_api": "searchable; Picker; Menu",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "number-field": {
+      "name": "Stepper and slider",
+      "kind": "native",
+      "description": "Bounded numeric entry with native accessibility adjustment.",
+      "native_api": "Stepper; Slider",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "animated-number": {
+      "name": "Animated number",
+      "kind": "native",
+      "description": "Localized changing metrics with an explicit Reduce Motion fallback.",
+      "native_api": "Text; contentTransition(.numericText(value:))",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "progress": {
+      "name": "Loading and progress",
+      "kind": "native",
+      "description": "Honest indeterminate work or actual measured completion.",
+      "native_api": "ProgressView",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "refresh": {
+      "name": "Pull to refresh",
+      "kind": "native",
+      "description": "Async refresh using native scrolling and task completion.",
+      "native_api": "refreshable",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "editable-list": {
+      "name": "Reorder and swipe actions",
+      "kind": "native",
+      "description": "Native editing actions with accessible alternatives.",
+      "native_api": "List; onMove; swipeActions",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "carousel": {
+      "name": "Carousel",
+      "kind": "native",
+      "description": "User-driven horizontal paging while preserving native scrolling.",
+      "native_api": "ScrollView; scrollTargetBehavior; TabView",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "date-selection": {
+      "name": "Date selection",
+      "kind": "native",
+      "description": "Localized dates; range endpoints need explicit domain validation.",
+      "native_api": "DatePicker; MultiDatePicker",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "color-picker": {
+      "name": "Color picker",
+      "kind": "native",
+      "description": "Native color selection.",
+      "native_api": "ColorPicker",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "share-copy": {
+      "name": "Share and copy",
+      "kind": "native",
+      "description": "User-initiated sharing or copying with useful result feedback.",
+      "native_api": "ShareLink; UIPasteboard",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "banner": {
+      "name": "Status banner",
+      "kind": "native",
+      "description": "Product-specific transient status; actionable errors persist.",
+      "native_api": "safeAreaInset; overlay; accessibility announcements",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "hierarchy": {
+      "name": "File tree and hierarchy",
+      "kind": "native",
+      "description": "Small-screen hierarchical disclosure and navigation.",
+      "native_api": "OutlineGroup; List; NavigationLink",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "chat-surface": {
+      "name": "Chat and task surface",
+      "kind": "native",
+      "description": "App-specific messages, composer and explicit streaming/task state.",
+      "native_api": "LazyVStack; ScrollView; TextField(axis:)",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    },
+    "live-activity": {
+      "name": "Live Activity and Dynamic Island",
+      "kind": "native",
+      "description": "System Live Activity requiring its own extension and capabilities.",
+      "native_api": "ActivityKit; WidgetKit",
+      "source_files": [],
+      "dependencies": [],
+      "guide": "references/native-patterns.md"
+    }
+  },
+  "preview_files": [
+    "assets/examples/MotionShowcase.swift"
+  ]
+}
